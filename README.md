@@ -52,8 +52,8 @@
     export default {
         methods: {
             ...mapActions({
-            start: 'progressbar/start',
-            stop: 'progressbar/stop'
+                start: 'progressbar/start',
+                stop: 'progressbar/stop'
             })
         }
     }
