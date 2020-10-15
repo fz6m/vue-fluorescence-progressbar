@@ -6,7 +6,7 @@
 
 1. 拷贝加载组件 `components/ProgressBar.vue` 到你的项目
 
-2. 拷贝加载组件的全局功能 `store/modules/progress-bar.js` 到你的项目，并在 Vuex 中配置该 modules（可参考 `store/index.js`
+2. 拷贝加载组件的全局功能 `store/modules/progress-bar.js` 到你的项目，并在 Vuex 中配置该 modules（可参考 `store/index.js` ）
 
 3. 配置路由，以适应你需要加载的使用场景：
 
@@ -50,16 +50,16 @@
 ```js
     import { mapActions } from 'vuex'
     export default {
-    methods: {
-        ...mapActions({
-        start: 'progressbar/start',
-        stop: 'progressbar/stop'
-        })
-    }
+        methods: {
+            ...mapActions({
+            start: 'progressbar/start',
+            stop: 'progressbar/stop'
+            })
+        }
     }
 ```
 
-之后在需要的地方进行调用：
+之后在该组件需要的地方进行调用：
 
 ```js
     // 开启 progressbar
@@ -77,9 +77,9 @@
     $light: linear-gradient(to right, $color, #29ffff, $color);
 ```
 
-`$color` ：进度条颜色
+ * `$color` ：进度条颜色
 
-`$light` ：进度条上滑动发光动画部分的颜色
+ * `$light` ：进度条上滑动发光动画部分的颜色
 
 某些情况下，你可以这样获得好处：
 
@@ -91,5 +91,5 @@
 
 ### 兼容性
 
-本组件也可在 Vue2 中使用，请适当修改即可，当使用 Vue2 时，由于存在 Vue 实例，你可以通过往组件上挂载方法来得到更多的便捷。
+本组件也可在 Vue2 中使用，只需适当修改即可，当使用 Vue2 时，由于存在 Vue 实例，你可以通过往组件上挂载方法来获取更多的便捷。
 
